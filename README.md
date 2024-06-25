@@ -9,7 +9,7 @@ Autores: [Alfredo Murillo](https://www.linkedin.com/in/alfredomurillomadrigal/),
 
 
 
-## Funciones.
+## Funciones
 
 - Poder agregar y eliminar products manualmente.
 
