@@ -12,7 +12,7 @@ def main(page: ft.Page):
 
     def edit_search(material):
         nrows = data.rows[:-1]
-
+        data.rows = nrows
         # pass
     
     # Function to create a table with the data
@@ -89,67 +89,6 @@ material = "soap"
 cells = [f"{i}" for i in df.loc[df["material"] == material].values]
 print(cells)
 print(df.loc[df["material"] == material].values)
+
+
 ft.app(main)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def counter(page: ft.Page):
-    def minus_click(e):
-        txt_number.value = str(int(txt_number.value) - 1)
-        page.update()
-
-    def plus_click(e):
-        txt_number.value = str(int(txt_number.value) + 1)
-        page.update()
-        
-    page.title = "App Ventas"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
-
-    txt_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
-
-    page.add(
-        ft.Row(
-            [
-                ft.IconButton(ft.icons.REMOVE, on_click=minus_click),
-                txt_number,
-                ft.IconButton(ft.icons.ADD, on_click=plus_click),
-            ],
-            alignment=ft.MainAxisAlignment.CENTER,
-        )
-    )
-    
